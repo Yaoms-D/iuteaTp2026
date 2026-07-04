@@ -1,0 +1,111 @@
+/* styles de la barre de navigation */
+
+header{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    background-color: green;
+    color: #fff;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links{
+    display: flex;
+}
+
+.links a{
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+
+.form{
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+form{
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+.form input, .form textarea{
+    margin: 5px 0;
+    line-height: 1.2em;
+    padding: 0;
+    width: 50%;
+    
+}
+
+#description_produit{
+    height: 200px;
+    padding: 0;
+}
+
+/* Styles du tableau des stocks */
+
+table{
+    border-collapse: collapse;
+}
+
+td,th{
+    border: 1px solid black;
+}
+
+thead{
+    background-color: green;
+    color: #fff;
+}
+
+.icon_produit{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+td{
+    padding: 10px;
+}
+
+/*  produit sur la page d'accueil*/
+
+.liste-produit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produit{
+    margin: 15px;
+}
+
+.produit img{
+    width: 200px;
+}
+
+.champ input{
+    width: 200px;
+}
+
+
