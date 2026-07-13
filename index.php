@@ -14,6 +14,13 @@
     <div class="page-title">
         <h1>Nos produits Frais</h1>
         <h3>Sélectionnez vos produits agricoles de qualité</h3>
+
+        <?php
+            if ($_SESSION) {
+                    echo '<span id="id_compte">'.$_SERVER['compte']['id_compte'].'</span>';
+                    # code...
+            }
+        ?>
     </div>
     <div id="liste-produit">
         <?php
@@ -24,12 +31,12 @@
         if ($produits) {
             for ($i=0; $i < count($produits) ; $i++) { 
                 # code...
-            
                 echo'<div class="produit">';
-                    echo'<img src="'.$produits[$i]['image_produit'].'" alt="'.$produits[$i]['nom_produit'].'">';
-                    echo'<p class="nom_produit">'.$produits[$i]['nom_produit'].'</p>';
-                    echo'<p class="prix_par_kilo"><span class="prix">'.$produits[$i]['prix_par_kilo'].'</span> FCFA/kg</p>';
-                    echo'<div class="stock_disponible"><span>stock disponible<span> <span class="quantité_totale_produit">'.$produits[$i]['quantite_produit'].'<span></div>';
+                    echo'<span id="produit'.$i.'">'.$produits[$i]['id_produit'].'</span>';
+                    echo'<img id="img'.$i.'" src="'.$produits[$i]['image_produit'].'" alt="'.$produits[$i]['nom_produit'].'">';
+                    echo'<p id="nom_produit'.$i.'">'.$produits[$i]['nom_produit'].'</p>';
+                    echo'<p class="prix_par_kilo"><span id="prix'.$i.'">'.$produits[$i]['prix_par_kilo'].'</span> FCFA/kg</p>';
+                    echo'<div class="stock_disponible"><span>stock disponible<span> <span id="quantite_totale_produit'.$i.'">'.$produits[$i]['quantite_produit'].'<span></div>';
                     echo'<div class="champ">';
                         echo'<button id="retirer'.$i.'">-</button>';
                         echo'<input type="text" id="quantite_produit'.$i.'">';
@@ -45,7 +52,7 @@
     </div>
     
 </main>
-<script src="js/index.js"></script>
+<script src="js/index.js" type="module"></script>
 </body>
 </html>
 

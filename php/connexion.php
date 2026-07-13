@@ -13,7 +13,7 @@ if(isset($_POST['connexion'])){
 
 
     if ($element) {
-        $_SESSION['compte'] = ["nom_compte" => $element['nom_compte'],"type_compte" => $element['type_compte']];
+        $_SESSION['compte'] = ["id_compte"=>$element["id_compte"]"nom_compte" => $element['nom_compte'],"type_compte" => $element['type_compte']];
         switch ($_SESSION['compte']['type_compte']) {
             case 'client':
                 header("location:../index.php");
